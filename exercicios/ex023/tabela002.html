@@ -12,6 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td,th{
@@ -27,18 +28,30 @@
         thead,tfoot {
             background-color: gray;
         }
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color:gray;
+        }
+
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
+        }
         td.num {
             text-align: right;
         }
     </style>
 </head>
 <body>
-    <h1>Minha primeira tabela</h1>
+    
     <table>
+        <caption>População das unidades federativas</caption>
         <thead>
-            <caption>Populaçãp das unidades federativas</caption>
-            <th scope="col">Estado</th>
-            <th scope="col" style="width: 100px;">População</th>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
+            </tr>
+            
             
 
         </thead>
